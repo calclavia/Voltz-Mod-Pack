@@ -1,0 +1,43 @@
+Mod Pack Name:
+Universal Electricity Pack
+
+Mods:			Versions:
+Basic Components	1.1.3
+ICBM			0.6.2
+Atomic Science		0.2.6
+Assembly Line		0.1.2
+Railcraft		6.8.0.0
+Electric Expansion	0.3.0
+Hawk's Machinery	Beta 0.9.9
+Mekanism		5.0 Pre2
+Green Technology	
+MFFS			2.2.8.1.6
+Mystcraft		0.9.4.05
+Blastcraft		0.3.0
+Inventory Tweaks	1.45(1.4.4)	
+Rei's Minimap		3.2_05
+Not Enough Items	1.4.2.7
+Code Chicken Core	0.6.8.1
+Forge (FML)		6.4.0.396 (4.5.2.459)
+
+Authors:
+Calclavia - ICBM, Universal Electricity, Atomic Science, Assembly Line
+Cammygames - Blastcraft
+Darkguardsman - Assembly Line, Steam Power, Basic Utilities
+Alex_hawks and Mattredsox - Electric Expansion
+Elusivehawk - Hawk's Machinery
+Aidancbrady - Mekanism, Green Technology
+Eearslya - Power Tools
+CovertJaguar - Railcraft
+ThunderDark - MFFS
+Inventory Tweaks - Jimeowan
+Rei's Minimap - ReiFNSK
+Not Enough Items - Chicken Bones
+
+Description:
+This is the official Universal Electricity mod pack. The Universal Electricity mod pack consists various mods that uses the Universal Electricity API as well as some mods that are compatible with Universal Electricity. The pack consists of various tech mods that uses a standardized electricity system, brining technology and exciting possibilities into Minecraft.
+
+Permissions:
+http://forum.feed-the-beast.com/threads/universal-electricity-mod-pack.1492/
+https://github.com/Thunderdark/ModularForceFieldSystem/issues/121
+http://calclavia.com/forum.php?p=t57
