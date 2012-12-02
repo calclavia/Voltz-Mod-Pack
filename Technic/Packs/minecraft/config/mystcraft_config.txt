@@ -1,0 +1,175 @@
+# Configuration file
+# Generated on 11/28/12 6:48 PM
+
+####################
+# block
+####################
+
+block {
+    I:block.bookstand.id=200
+    I:block.crystal.id=203
+    I:block.lectern.id=208
+    I:block.linkmodifier.id=207
+    I:block.linkportal.id=205
+    I:block.receptacle.id=206
+    I:block.starfissure.id=204
+    I:block.unstable.id=202
+    I:block.writingdesk.id=201
+}
+
+
+####################
+# entity
+####################
+
+entity {
+    I:entity.book.id=219
+    I:entity.falling.id=218
+    I:entity.meteor.id=217
+}
+
+
+####################
+# general
+####################
+
+general {
+    B:options.crafting.enableAgebook=true
+    B:options.crafting.enableBookstand=true
+    B:options.crafting.enableDesk=true
+    B:options.crafting.enableLectern=true
+    B:options.crafting.enableLinkModifier=true
+    B:options.crafting.enableLinkbook=true
+    B:options.crafting.enableNotebook=true
+    B:options.crafting.enableReceptacle=true
+    S:options.difficultyoverride=
+    B:options.instability=true
+    I:options.providerId=9
+    B:options.renderlabels=false
+}
+
+
+####################
+# instability
+####################
+
+instability {
+    B:blindness.enabled=true
+    B:confusion.enabled=true
+    B:crumble.enabled=true
+    B:decayblack.enabled=true
+    B:decayblue.enabled=true
+    B:decaypurple.enabled=true
+    B:decayred.enabled=true
+    B:decaywhite.enabled=true
+    B:enemyregeneration.enabled=true
+    B:erosion.enabled=true
+    B:explosion.enabled=true
+    B:fatigue.enabled=true
+    B:hunger.enabled=true
+    B:lightning.enabled=true
+    B:meteors.enabled=true
+    B:poisonedsurface.enabled=true
+    B:scorched.enabled=true
+    B:slow.enabled=true
+    B:weakness.enabled=true
+}
+
+
+####################
+# item
+####################
+
+item {
+    I:item.agebook.id=8700
+    I:item.linkbook.id=8701
+    I:item.notebook.id=8702
+    I:item.writingdesk.id=8703
+}
+
+
+####################
+# symbol
+####################
+
+symbol {
+    B:bioconhuge.enabled=true
+    B:bioconlarge.enabled=true
+    B:bioconmedium.enabled=true
+    B:bioconsmall.enabled=true
+    B:biocontiny.enabled=true
+    B:biomecontrollernative.enabled=true
+    B:caves.enabled=true
+    B:checkerboard_biomes.enabled=true
+    B:cloudblack.enabled=true
+    B:cloudblue.enabled=true
+    B:cloudchromatic.enabled=true
+    B:cloudgreen.enabled=true
+    B:cloudred.enabled=true
+    B:cloudwhite.enabled=true
+    B:cryformcry.enabled=true
+    B:cryformglow.enabled=true
+    B:day.enabled=true
+    B:denseores.enabled=true
+    B:dungeons.enabled=true
+    B:dusk.enabled=true
+    B:envaccel.enabled=true
+    B:envexplosions.enabled=true
+    B:envlightning.enabled=true
+    B:envmeteor.enabled=true
+    B:envscorch.enabled=true
+    B:flat.enabled=true
+    B:fogblack.enabled=true
+    B:fogblue.enabled=true
+    B:fogchromatic.enabled=true
+    B:foggreen.enabled=true
+    B:fognormal.enabled=true
+    B:fogred.enabled=true
+    B:fogwhite.enabled=true
+    B:ftime.enabled=true
+    B:huge_trees.enabled=true
+    B:lakes.enabled=true
+    B:lava_lakes.enabled=true
+    B:lightingbright.enabled=true
+    B:lightingdark.enabled=true
+    B:mineshafts.enabled=true
+    B:night.enabled=true
+    B:ntime.enabled=true
+    B:obelisks.enabled=true
+    B:rain.enabled=true
+    B:ravines.enabled=true
+    B:single_biome.enabled=true
+    B:skyblack.enabled=true
+    B:skyblue.enabled=true
+    B:skychromatic.enabled=true
+    B:skygreen.enabled=true
+    B:skylands.enabled=true
+    B:skynormal.enabled=true
+    B:skyred.enabled=true
+    B:skywhite.enabled=true
+    B:snow.enabled=true
+    B:standard_lighting.enabled=true
+    B:standard_terrain.enabled=true
+    B:star_fissure.enabled=true
+    B:stime.enabled=true
+    B:storm.enabled=true
+    B:strongholds.enabled=true
+    B:sunsetblack.enabled=true
+    B:sunsetblue.enabled=true
+    B:sunsetchromatic.enabled=true
+    B:sunsetgreen.enabled=true
+    B:sunsetred.enabled=true
+    B:sunsetwhite.enabled=true
+    B:terrainnether.enabled=true
+    B:villages.enabled=true
+    B:void.enabled=true
+    B:weathercloudy.enabled=true
+    B:weatherfast.enabled=true
+    B:weathernorm.enabled=true
+    B:weatheron.enabled=true
+    B:weatherslow.enabled=true
+    B:weathersun.enabled=true
+    B:woodcaves.enabled=true
+}
+
+
