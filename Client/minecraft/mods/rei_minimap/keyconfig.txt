@@ -1,0 +1,14 @@
+Menu Key: M
+Toggle Enable: None
+Toggle Render Type: None
+Toggle Zoom: Z
+Toggle Large Map: X
+Toggle Large Map Label: None
+Toggle Waypoints Visible: None
+Toggle Waypoints Marker: None
+Toggle Waypoints Dimension: None
+Toggle Entities Radar: None
+Set Waypoint: C
+Waypoint List: None
+Zoom In: None
+Zoom Out: None
