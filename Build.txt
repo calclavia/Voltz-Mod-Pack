@@ -1,0 +1,25 @@
+::UNIVERSAL ELECTRICITY BUILD SCRIPT
+@echo off
+echo Promotion Type?
+
+set /p CurrentBuild=<buildnumber.txt
+set /a BUILD_NUMBER=%CurrentBuild%+1
+echo %BUILD_NUMBER% >buildnumber.txt
+
+set FILE_NAME==UniversalElectricity_FTB_ModPack
+set FILE_NAME_Client=UniversalElectricity_FTB_ModPack_Client
+set FILE_NAME_Server=UniversalElectricity_FTB_ModPack_Client
+
+echo Starting to build the mod pack
+
+::ZIP-UP
+cd Client\
+"..\..\..\7za.exe" a "..\..\builds\%FILE_NAME_Client%" "*"
+cd ..\..\
+cd Server\
+"..\..\7za.exe" a "..\builds\%FILE_NAME_Server%" "*"
+cd ..\
+
+echo Done building %FILE_NAME%
+
+pause
