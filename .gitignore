@@ -1,6 +1,3 @@
-*.bat
-*.txt
+!*.bat
+!*.txt
 *.sh
-!Build.bat
-!Build Client.bat
-!Build Server.bat
