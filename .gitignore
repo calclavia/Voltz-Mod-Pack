@@ -1,6 +1,0 @@
-*.bat
-*.txt
-*.sh
-!/Client
-!/Server
-!/builds

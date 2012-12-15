@@ -1,0 +1,1 @@
+java -Xms512M -Xmx4G -jar UE-Mod-Pack-V1-Server.jar
