@@ -10,6 +10,5 @@ All mods in this pack have received either permission or is permitted by the mod
 For all Universal Electricity modders, you may push your mod into this pack and it will automatically be updated on the server next day.
 
 ### Access
-The official Voltz Pack server is currently private and whitelisted. Do not try to ask to join unless your mod is in the pack.
+The official Voltz Pack server is currently private and whitelisted. if you are a mod author please contact cammygames or calclavia to set you up
 
-Server IP: voltzserver.calclavia.com
