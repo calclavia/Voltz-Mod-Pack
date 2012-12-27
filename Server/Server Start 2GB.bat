@@ -1,1 +1,1 @@
-java -Xms512M -Xmx2G -jar UE-Mod-Pack-V1-Server.jar
+java -Xms512M -Xmx2G -jar minecraft_server.jar
