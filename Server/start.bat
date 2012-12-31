@@ -1,0 +1,1 @@
+java -Xms512M -Xmx1G -jar minecraft_server.jar
