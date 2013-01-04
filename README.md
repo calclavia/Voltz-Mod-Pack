@@ -12,7 +12,7 @@ http://forum.feed-the-beast.com/threads/universal-electricity-mod-pack.1492/
 https://github.com/Universal-Electricity/Voltz-Mod-Pack/issues/1
 
 ## Modders
-For all Universal Electricity modders, you may push your mod into this pack and it will automatically be updated on the server next day.
+For all Universal Electricity modders, you may fork this repo and send us a PR with the mods that need updateing and we will update the server with said mods
 
 ### Access
 The official Voltz Pack server is currently private and whitelisted. if you are a mod author please contact cammygames or calclavia to set you up
