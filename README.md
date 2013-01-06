@@ -19,30 +19,44 @@ The official Voltz Pack server is currently private and whitelisted. if you are 
 
 ## Mods
 Basic Components
+
 ICBM
+
 Atomic Science
+
 Assembly Line
+
 Railcraft
+
 Electric Expansion
-Basic Pipes
+
 Mekanism
+
 MFFS
-Mystcraft
+
 Inventory Tweaks
+
 Rei's Minimap
+
 Not Enough Items
-ForgeEssentials
 
 ## Authors
 Calclavia - ICBM, Universal Electricity, Atomic Science, Assembly Line
-Cammygames - Blastcraft
-Darkguardsman - Assembly Line, Steam Power, Basic Utilities
+
+Briman0094 - Assembly Line
+
+Darkguardsman - Assembly Line, Steam Power, Liquid Mechanics
+
 Alex_hawks and Mattredsox - Electric Expansion
-Elusivehawk - Hawk's Machinery
-Aidancbrady - Mekanism, Green Technology
-Eearslya - Power Tools
+
+Aidancbrady - Mekanism
+
 CovertJaguar - Railcraft
+
 ThunderDark - MFFS
+
 Inventory Tweaks - Jimeowan
+
 Rei's Minimap - ReiFNSK
+
 Not Enough Items - Chicken Bones
