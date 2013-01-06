@@ -15,7 +15,7 @@ echo Starting to build the mod pack Client
 echo Starting to Zip up Client
 
 cd Client\
-"7za.exe" a "..\builds\%FILE_NAME%" "*"
+"..\7za.exe" a "..\builds\%FILE_NAME%" "*"
 cd ..\
 
 echo Done building %FILE_NAME%
@@ -26,7 +26,7 @@ echo Starting to build the mod pack Server
 echo Starting to Zip up Server
 
 cd Server\
-"7za.exe" a "..\builds\%FILE_NAME_S%" "*"
+"..\7za.exe" a "..\builds\%FILE_NAME_S%" "*"
 cd ..\
 
 echo Done building %FILE_NAME_S%
