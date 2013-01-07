@@ -1,6 +1,8 @@
 Voltz-Mod-Pack
 ==============
 
+VERSION: 1.0.6.
+
 The Voltz Mod Pack is a mod pack created for both the FTB and the Technic launcher.
 
 ## Description
