@@ -10,7 +10,7 @@ The Voltz mod pack consists of various mods that uses the Universal Electricity 
 
 ## Permissions
 All mods in this pack have received either permission or is permitted by the mod's license.
-http://forum.feed-the-beast.com/threads/universal-electricity-mod-pack.1492/
+
 https://github.com/Universal-Electricity/Voltz-Mod-Pack/issues/1
 
 ## Modders
