@@ -1,0 +1,16 @@
+task build <<
+{
+	ext.env = System.getenv()
+	String name = env.JOB_NAME
+	println "Packing up " + name
+	String technicPack = "";
+	
+	println "Packing Technic Pack"
+	FileTree tree = fileTree(dir: '*').exclude "**/*.gradle"
+	
+	tree.each
+	{
+		file file ->
+		println file
+	}
+}
