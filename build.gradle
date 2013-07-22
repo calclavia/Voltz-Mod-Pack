@@ -1,16 +1,19 @@
-task build <<
+
+ext.env = System.getenv()
+String name = env.JOB_NAME
+println "Packing up " + name
+String technicPack = "";
+
+println "Packing Technic Pack"
+FileTree tree = fileTree(dir: '*').exclude "**/*.gradle"
+
+tree.each
 {
-	ext.env = System.getenv()
-	String name = env.JOB_NAME
-	println "Packing up " + name
-	String technicPack = "";
-	
-	println "Packing Technic Pack"
-	FileTree tree = fileTree(dir: '*').exclude "**/*.gradle"
-	
-	tree.each
-	{
-		file file ->
-		println file
-	}
+	file file ->
+	println file
+}
+
+task myZip(type: Zip)
+{
+    from 'somedir'
 }
