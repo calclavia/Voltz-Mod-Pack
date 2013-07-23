@@ -10,14 +10,28 @@ task technicClient(type: Zip) {
 }
 
 tasks.technicClient.doFirst {
-    println "Packing Technic Client Pack"
+    println "Zipping Technic Client Pack"
 }
 
-task ftbClient(type: Zip) {
+task copyFtbClient(type:Copy){
+    
+    println "Packing FTB Client Pack"
+    dir = new File('ftb_client_temp/minecraft')
+    dir.mkdirs()
+    
+    from('./') {
+        exclude 'bin'
+        exclude '**/*.gradle'
+        exclude '**/*.md'
+        exclude '**/*.zip'
+    }
+    
+    into dir
+    includeEmptyDirs = false
+}
 
-dir = new File('ftb_client_temp')
-dir.mkdirs()
-
+task ftbClient(dependsOn: copyFtbClient, type: Zip) {
+    
     from fileTree(dir: 'dir')
     
     eachFile { file ->
@@ -29,7 +43,7 @@ dir.mkdirs()
 }
 
 tasks.ftbClient.doFirst {
-    println "Packing FTB Client Pack"
+    println "Zipping FTB Client Pack"
 }
 
 task ftbServer(type: Zip) {
