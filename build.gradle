@@ -1,30 +1,25 @@
-task main <<
-{
-	//Project name
-	String name = System.env.JOB_NAME
-	println "Packing up " + name
-	String technicPack = "";
-
-	println "Packing Technic Pack"
-	FileTree technicFileTree = fileTree(dir: './').exclude("**/*.gradle")
-
-	technicFileTree.each
-	{
-		File file ->
-		println file
-	}
+task technicClient(type: Zip) {
+    from fileTree(dir: './', exclude: "**/*.gradle")
+    
+    eachFile { file ->
+        println 'packing $file'
+    }
+    
+    // sets the name of the artifact to the job name
+    baseName = System.env.JOB_NAME
+    
+    // set version if it exists
+    if (System.env.getProperty('VERSION'))
+    	version = System.env.VERSION
+    	
+    version += '.' + System.env.BUILD_NUMBER
+    
 }
 
-task technicClient(type: Zip) <<
-{
-    from technicFileTree
+tasks.technicClient.doFirst {
+    println "Packing FTB Client Pack"
+    println "Packing job $System.env.JOB_NAME"
 }
-
-println "Packing FTB Client Pack"
-
-
-println "Packing FTB Server Pack"
-
 
 artifacts
 {
