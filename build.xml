@@ -84,7 +84,7 @@ server.dat (optional)
 		<!-- Extract jar mods -->
 		<unzip src="bin/modpack.jar" dest="temp_forge"/>
 		<!-- Inject server jar -->
-		<zip destfile="temp_ftb_server/minecraft.jar" update="true">
+		<zip destfile="temp_ftb_server/minecraft_server.jar" update="true">
 			<fileset dir="temp_forge" />
 		</zip>
 		
