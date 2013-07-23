@@ -1,6 +1,5 @@
-//Set up general variables.
-ext.env = System.getenv()
-String name = env.JOB_NAME
+//Project name
+String name = System.env.JOB_NAME
 println "Packing up " + name
 String technicPack = "";
 
@@ -17,6 +16,12 @@ task technicClient(type: Zip) <<
 {
     from technicFileTree
 }
+
+println "Packing FTB Client Pack"
+
+
+println "Packing FTB Server Pack"
+
 
 artifacts
 {
