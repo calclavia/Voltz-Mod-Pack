@@ -92,6 +92,10 @@ server.dat (optional)
 			<fileset dir="temp_forge/*" />
 		</zip>
 		
+		<!-- Create start up scripts -->
+		<echo file="start.bat" append="false">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
+		<echo file="start.sh" append="false">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
+		
 		<!-- Zipping FTB Server -->
 		<zip destfile="${dir.development}${file.ftb_server}">
 			<fileset dir="temp_ftb_server" />
