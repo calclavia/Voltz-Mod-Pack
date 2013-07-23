@@ -1,28 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="Voltz Mod Pack" default="build">
+<!--
+The Mod Pack Builder is a build script designed to automatically
+build a Technic, FTB Client and FTB Server mod packs. Your file structure
+must be of the following:
+bin/modpack.jar - Includes jar mods.
+clientmods - Includes mods only to be distributed on client side.
+coremods - Coremods
+mods - Mods
+config - Configs
+server.dat (optional)
+@author Calclavia
+-->
+
+<project name="Mod Pack Builder" default="build">
 	<property file="build.properties" />
 	<property environment="env" />
-	<property name="file.technic" value="${env.JOB_NAME}_Technic.zip" />
-	<property name="file.ftb_client" value="${env.JOB_NAME}_FTB_Client.zip" />
-	<property name="file.ftb_server" value="${env.JOB_NAME}_FTB_Server.zip" />
+	<property name="file.technic" value="${env.JOB_NAME}_Technic.zip" regexp=" " replace="_"/>
+	<property name="file.ftb_client" value="${env.JOB_NAME}_FTB_Client.zip" regexp=" " replace="_"/>
+	<property name="file.ftb_server" value="${env.JOB_NAME}_FTB_Server.zip" regexp=" " replace="_"/>
 
 	<target name="build">
 		<!-- Pack Technic -->
 		<echo>Building Technic</echo>
-		<mkdir dir="temp_technic" />
-
+		
 		<fileset id="fileset_technic" dir="${dir.development}">
-			<exclude name=".git/**"/>
-			<exclude name="**/*.java"/>
-			<exclude name="**/*.xml"/>
-			<exclude name="**/*.gradle"/>
-			<exclude name="**/*.md"/>
+			<include name="bin/**"/>
+			<include name="config/**"/>
+			<include name="coremods/**"/>
+			<include name="mods/**"/>
+			<include name="**/*.dat"/>
 		</fileset>
 		
 		<!-- Copy files -->
 		<copy todir="temp_technic">
 			<fileset refid="fileset_technic"/>	
+		</copy>
+		
+		<copy todir="temp_technic/mods">
+			<fileset dir="clientmods" />
 		</copy>
 		
 		<!-- Zip files -->
@@ -48,6 +64,9 @@
 		<copy todir="temp_ftb_client/minecraft">
 			<fileset refid="fileset_minecraft"/>
 		</copy>
+		<copy todir="temp_ftb_client/mods">
+			<fileset dir="clientmods" />
+		</copy>
 		
 		<!-- Zipping FTB Client -->
 		<zip destfile="${dir.development}${file.ftb_client}">
@@ -60,9 +79,18 @@
 		<copy todir="temp_ftb_server">
 			<fileset refid="fileset_minecraft"/>
 		</copy>
+		<copy todir="temp_ftb_server/mods">
+			<fileset dir="clientmods" />
+		</copy>
 		
 		<!-- Download server jar file -->
 		<get src="https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar" dest="temp_ftb_server/minecraft.jar"/>
+		<!-- Extract jar mods -->
+		<unzip src="bin/modpack.jar" dest="${dir.development}temp_forge"/>
+		<!-- Inject server jar -->
+		<zip destfile="temp_ftb_server/minecraft.jar" update="true">
+			<fileset dir="temp_forge/*" />
+		</zip>
 		
 		<!-- Zipping FTB Server -->
 		<zip destfile="${dir.development}${file.ftb_server}">
