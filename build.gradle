@@ -1,7 +1,7 @@
 task technicClient(type: Zip) {
     from fileTree(dir: './', exclude: "**/*.gradle")
     
-    eachFile { File -> file
+    eachFile { file ->
         println 'Packing $file'
     }
     
@@ -16,7 +16,7 @@ tasks.technicClient.doFirst {
 task ftbClient(type: Zip) {
     from fileTree(dir: './', exclude: "**/*.gradle")
     
-    eachFile { File -> file
+    eachFile { file ->
         println 'Packing $file'
     }
     
@@ -26,8 +26,4 @@ task ftbClient(type: Zip) {
 
 tasks.ftbClient.doFirst {
     println "Packing FTB Client Pack"
-}
-
-artifacts {
-    archives technicClient
 }
