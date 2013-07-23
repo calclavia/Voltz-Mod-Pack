@@ -79,9 +79,6 @@ server.dat (optional)
 		<copy todir="temp_ftb_server">
 			<fileset refid="fileset_minecraft"/>
 		</copy>
-		<copy todir="temp_ftb_server/mods">
-			<fileset dir="clientmods" />
-		</copy>
 		
 		<!-- Download server jar file -->
 		<get src="https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar" dest="temp_ftb_server/minecraft.jar"/>
