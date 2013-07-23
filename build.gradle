@@ -1,19 +1,13 @@
-task technicClient(type: Zip) {
+task technicClient(type: Zip)
+{
     from fileTree(dir: './', exclude: "**/*.gradle")
     
     eachFile { file ->
-        println 'packing $file'
+        println 'Packing $file'
     }
     
-    // sets the name of the artifact to the job name
+    // Sets the name of the artifact to the job name
     baseName = System.env.JOB_NAME
-    
-    // set version if it exists
-    if (System.env.getProperty('VERSION'))
-    	version = System.env.VERSION
-    	
-    version += '.' + System.env.BUILD_NUMBER
-    
 }
 
 tasks.technicClient.doFirst {
