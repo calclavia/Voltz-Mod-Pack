@@ -16,7 +16,7 @@ tasks.technicClient.doFirst {
 task ftbClient(type: Zip) {
 
 dir = new File('ftb_client_temp')
-dir.mkdir()
+dir.mkdirs()
 
     from fileTree(dir: 'dir')
     
