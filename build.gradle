@@ -2,7 +2,7 @@ task technicClient(type: Zip) {
     from fileTree(dir: './', exclude: "**/*.gradle")
     
     eachFile { file ->
-        println 'Packing $file'
+        println 'Packing ' + file
     }
     
     // Sets the name of the artifact to the job name
@@ -17,7 +17,7 @@ task ftbClient(type: Zip) {
     from fileTree(dir: './', exclude: "**/*.gradle")
     
     eachFile { file ->
-        println 'Packing $file'
+        println 'Packing ' + file
     }
     
     // Sets the name of the artifact to the job name
