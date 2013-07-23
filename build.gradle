@@ -1,3 +1,5 @@
+confgurations { archives }
+
 task technicClient(type: Zip) {
     from fileTree(dir: './', exclude: "**/*.gradle")
     
