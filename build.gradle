@@ -7,7 +7,6 @@ task technicClient(type: Zip) {
     
     // Sets the name of the artifact to the job name
     baseName = System.env.JOB_NAME + " Technic"
-    archivePath = '.gradle/1.6/taskArtifacts/'+baseName
 }
 
 tasks.technicClient.doFirst {
