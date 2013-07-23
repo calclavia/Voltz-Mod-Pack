@@ -13,7 +13,12 @@ technicFileTree.each
 	println file
 }
 
-task myZip(type: Zip) <<
+task technicClient(type: Zip) <<
 {
     from technicFileTree
+}
+
+artifacts
+{
+    archives technicClient
 }
