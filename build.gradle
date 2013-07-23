@@ -6,12 +6,26 @@ task technicClient(type: Zip) {
     }
     
     // Sets the name of the artifact to the job name
-    baseName = System.env.JOB_NAME
+    baseName = System.env.JOB_NAME + " Technic"
 }
 
 tasks.technicClient.doFirst {
+    println "Packing Technic Client Pack"
+}
+
+task ftbClient(type: Zip) {
+    from fileTree(dir: './', exclude: "**/*.gradle")
+    
+    eachFile { File -> file
+        println 'Packing $file'
+    }
+    
+    // Sets the name of the artifact to the job name
+    baseName = System.env.JOB_NAME + " FTB"
+}
+
+tasks.ftbClient.doFirst {
     println "Packing FTB Client Pack"
-    println "Packing job $System.env.JOB_NAME"
 }
 
 artifacts {
