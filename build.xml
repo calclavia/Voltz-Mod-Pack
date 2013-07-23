@@ -14,7 +14,7 @@ server.dat (optional)
 -->
 
 <project name="Mod Pack Builder" default="build">
-	<property file="build.properties" />
+	<property environment="env" />
 	<property name="file.technic" value="${env.JOB_NAME}_Technic.zip"/>
 	<property name="file.ftb_client" value="${env.JOB_NAME}_FTB_Client.zip"/>
 	<property name="file.ftb_server" value="${env.JOB_NAME}_FTB_Server.zip"/>
