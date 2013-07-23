@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <project name="Voltz Mod Pack" default="build">
-
 	<property file="build.properties" />
 	<property environment="env" />
-	<property name="file.technic" value="${project.name}_Technic.zip" />
-	<property name="file.ftb_client" value="${project.name}_FTB_Client.zip" />
-	<property name="file.ftb_server" value="${project.name}_FTB_Server.zip" />
+	<property name="file.technic" value="${env.JOB_NAME}_Technic.zip" />
+	<property name="file.ftb_client" value="${env.JOB_NAME}_FTB_Client.zip" />
+	<property name="file.ftb_server" value="${env.JOB_NAME}_FTB_Server.zip" />
 
 	<target name="build">
 		<!-- Make temp dirs -->
@@ -46,12 +45,10 @@
 		<!-- Copy Minecraft folder -->
 		<copy todir="temp_ftb_client/minecraft">
 			<fileset dir="${dir.development}">
-				<exclude name=".git/**"/>
-				<exclude name="**/*.java"/>
-				<exclude name="**/*.xml"/>
-				<exclude name="**/*.gradle"/>
-				<exclude name="**/*.md"/>
-				<exclude name="bin"/>
+				<include name="config"/>
+				<include name="coremods"/>
+				<include name="mods"/>
+				<include name="server.dat"/>
 			</fileset>
 		</copy>
 		
