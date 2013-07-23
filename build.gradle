@@ -5,9 +5,9 @@ println "Packing up " + name
 String technicPack = "";
 
 println "Packing Technic Pack"
-FileTree tree = fileTree(dir: './').exclude("**/*.gradle")
+FileTree technicFileTree = fileTree(dir: './').exclude("**/*.gradle")
 
-tree.each
+technicFileTree.each
 {
 	File file ->
 	println file
@@ -15,5 +15,5 @@ tree.each
 
 task myZip(type: Zip) <<
 {
-    from 'somedir'
+    from technicFileTree
 }
