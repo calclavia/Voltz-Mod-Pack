@@ -5,7 +5,7 @@ println "Packing up " + name
 String technicPack = "";
 
 println "Packing Technic Pack"
-FileTree tree = fileTree(dir: 'mods').exclude("**/*.gradle")
+FileTree tree = fileTree(dir: './').exclude("**/*.gradle")
 
 tree.each
 {
