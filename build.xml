@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="Voltz Mod Pack" default="build">
+
+	<property file="build.properties" />
+	<property environment="env" />
+	<property name="file.technic" value="${project.name}_Technic.zip" />
+	<property name="file.ftb_client" value="${project.name}_FTB_Client.zip" />
+	<property name="file.ftb_server" value="${project.name}_FTB_Server.zip" />
+
+	<target name="build">
+		<!-- Make temp dirs -->
+		<mkdir dir="temp_ftb_server" />
+	
+		<!-- Pack Technic -->
+		<echo>Building Technic</echo>
+		<mkdir dir="temp_technic" />
+
+		<fileset id="fileset_technic" dir="${dir.development}">
+			<exclude name=".git/**"/>
+			<exclude name="**/*.java"/>
+			<exclude name="**/*.xml"/>
+			<exclude name="**/*.gradle"/>
+			<exclude name="**/*.md"/>
+		</fileset>
+		
+		<!-- Copy files -->
+		<copy todir="temp_technic">
+			<fileset refid="fileset_technic"/>	
+		</copy>
+		
+		<!-- Zip files -->
+		<zip destfile="${dir.development}${file.technic}">
+			<fileset dir="temp_technic" />
+		</zip>
+		
+		<!-- Pack FTB -->
+		<echo>Packing FTB Client</echo>
+		<mkdir dir="temp_ftb_client" />
+
+		<!-- Copy InstMods folder -->
+		<copy todir="temp_ftb_client/instMods">
+			<fileset dir="${dir.development}/bin" />
+		</copy>
+		
+		<!-- Copy Minecraft folder -->
+		<copy todir="temp_ftb_client/minecraft">
+			<fileset dir="${dir.development}">
+				<exclude name=".git/**"/>
+				<exclude name="**/*.java"/>
+				<exclude name="**/*.xml"/>
+				<exclude name="**/*.gradle"/>
+				<exclude name="**/*.md"/>
+				<exclude name="bin"/>
+			</fileset>
+		</copy>
+		
+		<!-- Zipping FTB Client -->
+		<zip destfile="${dir.development}${file.ftb_client}">
+			<fileset dir="temp_ftb_client" />
+		</zip>
+		
+		<!-- Pack FTB Server -->
+		<echo>Packing FTB Server</echo>
+		<!-- Copy Minecraft folder -->
+		<copy todir="temp_ftb_server/minecraft">
+			<fileset dir="${dir.development}">
+				<exclude name=".git/**"/>
+				<exclude name="**/*.java"/>
+				<exclude name="**/*.xml"/>
+				<exclude name="**/*.gradle"/>
+				<exclude name="**/*.md"/>
+				<exclude name="bin"/>
+			</fileset>
+		</copy>
+		
+		<!-- Zipping FTB Server -->
+		<zip destfile="${dir.development}${file.ftb_server}">
+			<fileset dir="temp_ftb_server" />
+		</zip>
+
+	</target>
+</project>
