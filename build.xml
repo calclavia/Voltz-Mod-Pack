@@ -8,9 +8,6 @@
 	<property name="file.ftb_server" value="${env.JOB_NAME}_FTB_Server.zip" />
 
 	<target name="build">
-		<!-- Make temp dirs -->
-		<mkdir dir="temp_ftb_server" />
-	
 		<!-- Pack Technic -->
 		<echo>Building Technic</echo>
 		<mkdir dir="temp_technic" />
@@ -35,21 +32,21 @@
 		
 		<!-- Pack FTB -->
 		<echo>Packing FTB Client</echo>
-		<mkdir dir="temp_ftb_client" />
-
 		<!-- Copy InstMods folder -->
 		<copy todir="temp_ftb_client/instMods">
 			<fileset dir="${dir.development}/bin" />
 		</copy>
 		
+		<fileset id="fileset_minecraft" dir="${dir.development}">
+			<include name="config/**"/>
+			<include name="coremods/**"/>
+			<include name="mods/**"/>
+			<include name="**/*.dat"/>
+		</fileset>
+		
 		<!-- Copy Minecraft folder -->
 		<copy todir="temp_ftb_client/minecraft">
-			<fileset dir="${dir.development}">
-				<include name="config"/>
-				<include name="coremods"/>
-				<include name="mods"/>
-				<include name="server.dat"/>
-			</fileset>
+			<fileset refid="fileset_minecraft"/>
 		</copy>
 		
 		<!-- Zipping FTB Client -->
@@ -60,16 +57,12 @@
 		<!-- Pack FTB Server -->
 		<echo>Packing FTB Server</echo>
 		<!-- Copy Minecraft folder -->
-		<copy todir="temp_ftb_server/minecraft">
-			<fileset dir="${dir.development}">
-				<exclude name=".git/**"/>
-				<exclude name="**/*.java"/>
-				<exclude name="**/*.xml"/>
-				<exclude name="**/*.gradle"/>
-				<exclude name="**/*.md"/>
-				<exclude name="bin"/>
-			</fileset>
+		<copy todir="temp_ftb_server">
+			<fileset refid="fileset_minecraft"/>
 		</copy>
+		
+		<!-- Download server jar file -->
+		<get src="https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar" dest="temp_ftb_server/minecraft.jar"/>
 		
 		<!-- Zipping FTB Server -->
 		<zip destfile="${dir.development}${file.ftb_server}">
