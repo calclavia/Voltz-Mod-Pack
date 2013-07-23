@@ -14,7 +14,11 @@ tasks.technicClient.doFirst {
 }
 
 task ftbClient(type: Zip) {
-    from fileTree(dir: './', exclude: "**/*.gradle")
+
+dir = new File('ftb_client_temp')
+dir.mkdir()
+
+    from fileTree(dir: 'dir')
     
     eachFile { file ->
         println 'Packing ' + file
