@@ -1,15 +1,18 @@
-//Project name
-String name = System.env.JOB_NAME
-println "Packing up " + name
-String technicPack = "";
-
-println "Packing Technic Pack"
-FileTree technicFileTree = fileTree(dir: './').exclude("**/*.gradle")
-
-technicFileTree.each
+task main <<
 {
-	File file ->
-	println file
+	//Project name
+	String name = System.env.JOB_NAME
+	println "Packing up " + name
+	String technicPack = "";
+
+	println "Packing Technic Pack"
+	FileTree technicFileTree = fileTree(dir: './').exclude("**/*.gradle")
+
+	technicFileTree.each
+	{
+		File file ->
+		println file
+	}
 }
 
 task technicClient(type: Zip) <<
