@@ -23,7 +23,7 @@ server.dat (optional)
 		<!-- Pack Technic -->
 		<echo>Building Technic</echo>
 		
-		<fileset id="fileset_technic" dir="${dir.development}">
+		<fileset id="fileset_technic" dir="./">
 			<include name="bin/**"/>
 			<include name="config/**"/>
 			<include name="coremods/**"/>
@@ -41,7 +41,7 @@ server.dat (optional)
 		</copy>
 		
 		<!-- Zip files -->
-		<zip destfile="${dir.development}${file.technic}">
+		<zip destfile="./${file.technic}">
 			<fileset dir="temp_technic" />
 		</zip>
 		
@@ -49,10 +49,10 @@ server.dat (optional)
 		<echo>Packing FTB Client</echo>
 		<!-- Copy InstMods folder -->
 		<copy todir="temp_ftb_client/instMods">
-			<fileset dir="${dir.development}/bin" />
+			<fileset dir=".//bin" />
 		</copy>
 		
-		<fileset id="fileset_minecraft" dir="${dir.development}">
+		<fileset id="fileset_minecraft" dir="./">
 			<include name="config/**"/>
 			<include name="coremods/**"/>
 			<include name="mods/**"/>
@@ -68,7 +68,7 @@ server.dat (optional)
 		</copy>
 		
 		<!-- Zipping FTB Client -->
-		<zip destfile="${dir.development}${file.ftb_client}">
+		<zip destfile="./${file.ftb_client}">
 			<fileset dir="temp_ftb_client" />
 		</zip>
 		
@@ -93,7 +93,7 @@ server.dat (optional)
 		<echo file="start.sh" append="false">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
 		
 		<!-- Zipping FTB Server -->
-		<zip destfile="${dir.development}${file.ftb_server}">
+		<zip destfile="./${file.ftb_server}">
 			<fileset dir="temp_ftb_server" />
 		</zip>
 
