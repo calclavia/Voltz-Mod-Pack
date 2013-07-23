@@ -8,7 +8,7 @@ FileTree tree = fileTree(dir: '*').exclude "**/*.gradle"
 
 tree.each
 {
-	file file ->
+	File file ->
 	println file
 }
 
