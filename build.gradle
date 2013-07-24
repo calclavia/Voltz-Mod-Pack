@@ -9,9 +9,9 @@ task('technic', type: Zip)
         include 'config/**'
         include 'coremods/**'
         include 'mods/**'
-        include '**/*.dat'
+        include 'servers.dat'
     }
-    
+
     // do not get random epty directories from which no files are included
     includeEmptyDirs = false
 
@@ -25,9 +25,42 @@ task('technic', type: Zip)
 
     // this works.
     baseName = "${System.env.JOB_NAME}_Technic"
-    
+
     // logging for no reason
-    doLast {
-        logger.lifecycle "Pack created: $archivePath"
+    doLast { logger.lifecycle "Pack created: $archivePath" }
+}
+
+task('ftbClient', type: Zip)
+{
+    group = 'modpack'
+    description = 'Builds an ftb pack client zip'
+
+    into('instMods') { from 'bin' }
+
+    // grab all this stuff.
+    into ('minecraft') {
+        from('.') {
+            include 'config/**'
+            include 'coremods/**'
+            include 'mods/**'
+            include 'servers.dat'
+        }
     }
+
+    // do not get random epty directories from which no files are included
+    includeEmptyDirs = false
+
+    // specifically into this part of the zip
+    into('minecraft/mods'){ from 'clientmods' }
+
+    // info output.
+    eachFile { file ->
+        logger.info "packing file $file"
+    }
+
+    // this works.
+    baseName = "${System.env.JOB_NAME}_FTB_Client"
+
+    // logging for no reason
+    doLast { logger.lifecycle "Pack created: $archivePath" }
 }
