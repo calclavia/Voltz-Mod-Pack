@@ -1,62 +1,33 @@
-task technicClient(type: Zip) {
-    from fileTree(dir: './', exclude: "**/*.gradle")
-    
-    eachFile { file ->
-        println 'Packing ' + file
+task('technic', type: Zip)
+{
+    group = 'modpack'
+    description = 'Builds a technic pack zip'
+
+    // grab all this stuff.
+    from('.') {
+        include 'bin/**'
+        include 'config/**'
+        include 'coremods/**'
+        include 'mods/**'
+        include '**/*.dat'
     }
     
-    // Sets the name of the artifact to the job name
-    baseName = System.env.JOB_NAME + " Technic"
-}
-
-tasks.technicClient.doFirst {
-    println "Zipping Technic Client Pack"
-}
-
-task copyFtbClient(type:Copy){
-    
-    println "Packing FTB Client Pack"
-    dir = new File('ftb_client_temp/minecraft')
-    dir.mkdirs()
-    
-    from('./') {
-        exclude 'bin'
-        exclude '**/*.gradle'
-        exclude '**/*.md'
-        exclude '**/*.zip'
-    }
-    
-    into dir
+    // do not get random epty directories from which no files are included
     includeEmptyDirs = false
-}
 
-task ftbClient(dependsOn: copyFtbClient, type: Zip) {
-    
-    from fileTree(dir: 'dir')
-    
+    // specifically into this part of the zip
+    into('mods'){ from fileTree('clientmods') }
+
+    // info output.
     eachFile { file ->
-        println 'Packing ' + file
+        logger.info "packing file $file"
     }
-    
-    // Sets the name of the artifact to the job name
-    baseName = System.env.JOB_NAME + " FTB Client"
-}
 
-tasks.ftbClient.doFirst {
-    println "Zipping FTB Client Pack"
-}
-
-task ftbServer(type: Zip) {
-    from fileTree(dir: './', exclude: "**/*.gradle")
+    // this works.
+    baseName = "${System.env.JOB_NAME}_Technic"
     
-    eachFile { file ->
-        println 'Packing ' + file
+    // logging for no reason
+    doLast {
+        logger.lifecycle "Pack created: $archivePath"
     }
-    
-    // Sets the name of the artifact to the job name
-    baseName = System.env.JOB_NAME + " FTB Server"
-}
-
-tasks.ftbServer.doFirst {
-    println "Packing FTB Server Pack"
 }
