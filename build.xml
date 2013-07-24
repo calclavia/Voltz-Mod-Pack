@@ -80,7 +80,7 @@ server.dat (optional)
 		</copy>
 		
 		<!-- Download server jar file -->
-		<get src="https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar" dest="temp_ftb_server/minecraft.jar"/>
+		<get src="https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar" dest="temp_ftb_server/minecraft_server.jar"/>
 		<!-- Extract jar mods -->
 		<unzip src="bin/modpack.jar" dest="temp_forge"/>
 		<!-- Inject server jar -->
@@ -89,8 +89,8 @@ server.dat (optional)
 		</zip>
 		
 		<!-- Create start up scripts -->
-		<echo file="start.bat" append="false">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
-		<echo file="start.sh" append="false">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
+		<echo file="temp_ftb_server/start.bat">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
+		<echo file="temp_ftb_server/start.sh">java -Xms512M -Xmx1G -jar minecraft_server.jar</echo>
 		
 		<!-- Zipping FTB Server -->
 		<zip destfile="./${file.ftb_server}">
