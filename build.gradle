@@ -1,3 +1,5 @@
+// START >> TECHNIC
+
 task('technic', type: Zip)
 {
     group = 'modpack'
@@ -30,6 +32,8 @@ task('technic', type: Zip)
     doLast { logger.lifecycle "Pack created: $archivePath" }
 }
 
+// START >> FTB_CLIENT
+
 task('ftbClient', type: Zip)
 {
     group = 'modpack'
@@ -60,6 +64,104 @@ task('ftbClient', type: Zip)
 
     // this works.
     baseName = "${System.env.JOB_NAME}_FTB_Client"
+
+    // logging for no reason
+    doLast { logger.lifecycle "Pack created: $archivePath" }
+}
+
+// START >> FTB_SERVER
+
+// directory creation
+task('ftbServerDir') << {
+    mkdir 'ftb_server_temp'
+}
+
+task('downloadMinecraft', dependsOn 'ftbServerDir') {
+    // for gradles incremental build system
+    outputs.file "ftb_server_temp/minecraft_server.jar"
+    
+    doLast {
+        new File("ftb_server_temp/minecraft_server.jar") << "https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar".toURL().bytes
+    }
+}
+
+task('injectJar', type: Jar) {
+    
+    // task dependancies
+    dependsOn 'ftbServerDir'
+    dependsOn 'downloadMinecraft'
+    
+    def forgeTree = zipTree('bin/modpack.jar')
+    
+    // everything from the serveJar except the forge stuff
+    from zipTree('ftb_server_temp/minecraft_server.jar')
+    
+    // everything from forge
+    from forgeTree
+    
+    destinationDir = file('ftb_server_temp')
+    
+    baseName = 'minecraft_server'
+    classifier = 'forged'
+}
+
+task('generateStartScripts') {
+    // for gradle to manage
+    outputs.file 'ftb_server_temp/start.bat'
+    outputs.file 'ftb_server_temp/start.sh'
+    
+    doLast {
+        def str = 'java -Xms512M -Xmx1G -jar minecraft_server.jar'
+        
+        ['ftb_server_temp/start.bat', 'ftb_server_temp/start.sh'].each {
+            def file = new File(it)
+            
+            // ensure parent files are made.
+            file.getParentFile().mkdirs()
+            
+            if (!file.exists())
+                file.createNewFile()
+            
+            file.write(str)
+        }
+    }
+}
+
+task('ftbServer', type: Zip)
+{    
+    group = 'modpack'
+    description = 'Builds an ftb pack server zip'
+    
+    // task dependancies
+    dependsOn 'generateStartScripts'
+    dependsOn 'injectJar'
+
+    // grab all this stuff.
+    from('.') {
+        include 'config/**'
+        include 'coremods/**'
+        include 'mods/**'
+        include 'servers.dat'
+    }
+    
+    from('ftb_server_temp') {
+        include 'start.*'
+        include '*-forged.jar'
+    }
+    
+    // rename the server jar
+    rename('(.*?)-forged.jar', '$1.jar')
+
+    // do not get random epty directories from which no files are included
+    includeEmptyDirs = false
+
+    // info output.
+    eachFile { file ->
+        logger.info "packing file $file"
+    }
+
+    // this works.
+    baseName = "${System.env.JOB_NAME}_FTB_Server"
 
     // logging for no reason
     doLast { logger.lifecycle "Pack created: $archivePath" }
