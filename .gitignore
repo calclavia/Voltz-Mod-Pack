@@ -1,0 +1,9 @@
+#gradle
+build
+.gradle
+
+#artifacts
+*_Technic.zip
+*_FTB_Client.zip
+*_FTB_Server.zip
+
