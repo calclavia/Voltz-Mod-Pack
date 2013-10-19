@@ -22,5 +22,13 @@ Voltz/Ampz is a mod pack that consists of various Universal Electricity mods int
 * Immibis's Microblocks (Immbis)
 * RedLogic (Immbis)
 
-Next version will include
+Next version:
 * Zan's Minimap (Zaneris)
+* Forge Multipart
+* Project Red
+* Resonant Induction
+* RotaryCraft
+Remove:
+* Immibis Core (Immbis)
+* Immibis's Microblocks (Immbis)
+* RedLogic (Immbis)
