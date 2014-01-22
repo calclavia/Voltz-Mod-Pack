@@ -27,8 +27,10 @@ Add:
 * Zan's Minimap (Zaneris)
 * Forge Multipart
 * Project Red (http://projectred.endermedia.org/)
+* RotaryCraft
+
+###When stable
 * Resonant Induction
-* RotaryCraft (If UE compatibility is added)
 
 Remove:
 * Rei's Minimap (ReiFNSK)
