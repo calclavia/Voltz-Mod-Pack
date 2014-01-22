@@ -29,10 +29,10 @@ Add:
 * Project Red (http://projectred.endermedia.org/)
 * RotaryCraft
 
-###When stable
+####When stable
 * Resonant Induction
 
-Remove:
+###Remove:
 * Rei's Minimap (ReiFNSK)
 * Immibis Core (Immbis)
 * Immibis's Microblocks (Immbis)
