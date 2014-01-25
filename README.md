@@ -28,6 +28,7 @@ Add:
 * Forge Multipart
 * Project Red (http://projectred.endermedia.org/)
 * RotaryCraft
+* OpenComputers
 
 ####When stable
 * Resonant Induction
