@@ -28,9 +28,8 @@ Add:
 * Forge Multipart
 * Project Red (http://projectred.endermedia.org/)
 * RotaryCraft
-* OpenComputers
-
-####When stable
+* Open Computers
+* Mad Science
 * Resonant Induction
 
 ###Remove:
@@ -39,3 +38,4 @@ Add:
 * Immibis's Microblocks (Immbis)
 * RedLogic (Immbis)
 * CoFHCore (Not updated)
+* Mekanism
