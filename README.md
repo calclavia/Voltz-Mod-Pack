@@ -37,5 +37,4 @@ Add:
 * Immibis Core (Immbis)
 * Immibis's Microblocks (Immbis)
 * RedLogic (Immbis)
-* CoFHCore (Not updated)
 * Mekanism
