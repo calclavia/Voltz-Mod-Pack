@@ -16,14 +16,8 @@ Voltz/Ampz is a mod pack that consists of various Universal Electricity mods int
 * Minefactory Reloaded (Powercrystals)
 * Modular Powersuits (MachineMuse)
 * Modular Powersuits Addon (Andrew)
-* Rei's Minimap (ReiFNSK)
 * NEI Plugins (mistaqur)
-* Immibis Core (Immbis)
-* Immibis's Microblocks (Immbis)
 * RedLogic (Immbis)
-
-###Next version
-Add:
 * Zan's Minimap (Zaneris)
 * Forge Multipart
 * Project Red (http://projectred.endermedia.org/)
@@ -31,11 +25,15 @@ Add:
 * Open Computers
 * Mad Science
 * Resonant Induction
+* CoFHCore
+
+###Next version
+Add:
+
 
 ###Remove:
 * Rei's Minimap (ReiFNSK)
 * Immibis Core (Immbis)
 * Immibis's Microblocks (Immbis)
 * RedLogic (Immbis)
-* CoFHCore (Not updated)
 * Mekanism
