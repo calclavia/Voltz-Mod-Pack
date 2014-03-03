@@ -19,7 +19,7 @@ Voltz/Ampz is a mod pack that consists of various Universal Electricity mods int
 * Zan's Minimap (Zaneris)
 * Forge Multipart
 * Project Red (http://projectred.endermedia.org/)
-* RotaryCraft
+* RotaryCraft (Reika)
 * Open Computers (Sangar)
 * Mad Science
 * Resonant Induction (Calclavia)
