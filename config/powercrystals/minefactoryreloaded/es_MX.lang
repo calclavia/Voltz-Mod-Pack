@@ -143,15 +143,15 @@ tile.mfr.cable.redstone.name = Cable RedNet
 tile.mfr.rednet.logic.name = Controlador Programable RedNet
 tile.mfr.rednet.panel.historian.name = Historiador RedNet
 
-tile.mfr.liquid.milk.still.name = Leche
-tile.mfr.liquid.sludge.still.name = Barro
-tile.mfr.liquid.sewage.still.name = Aguas Residuales
-tile.mfr.liquid.essence.still.name = Esencia
-tile.mfr.liquid.biofuel.still.name = BioCombustible
-tile.mfr.liquid.meat.still.name = Carne
-tile.mfr.liquid.pinkslime.still.name = Limo Rosa
-tile.mfr.liquid.chocolatemilk.still.name = Leche Chocolatada
-tile.mfr.liquid.mushroomsoup.still.name = Sopa de Setas
+fluid.mfr.liquid.milk.still.name = Leche
+fluid.mfr.liquid.sludge.still.name = Barro
+fluid.mfr.liquid.sewage.still.name = Aguas Residuales
+fluid.mfr.liquid.mobessence.still.name = Esencia
+fluid.mfr.liquid.biofuel.still.name = BioCombustible
+fluid.mfr.liquid.meat.still.name = Carne
+fluid.mfr.liquid.pinkslime.still.name = Limo Rosa
+fluid.mfr.liquid.chocolatemilk.still.name = Leche Chocolatada
+fluid.mfr.liquid.mushroomsoup.still.name = Sopa de Setas
 
 item.mfr.bucket.milk.name = Balde con Leche
 item.mfr.bucket.sewage.name = Balde con Aguas Residuales

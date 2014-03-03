@@ -2,7 +2,6 @@
 #translated by crafteverywhere
 #version=2.6.X
 
-
 tile.mfr.machine.planter.name = \u64ad\u79cd\u673a
 tile.mfr.machine.fisher.name = \u9493\u9c7c\u673a
 tile.mfr.machine.harvester.name = \u6536\u5272\u673a
@@ -44,6 +43,9 @@ tile.mfr.machine.blocksmasher.name = \u65b9\u5757\u788e\u88c2\u673a
 tile.mfr.machine.rednote.name = \u7ea2\u77f3\u97f3\u7b26\u76d2
 tile.mfr.machine.autobrewer.name = \u81ea\u52a8\u917f\u9020\u53f0
 tile.mfr.machine.fruitpicker.name = \u679c\u5b9e\u91c7\u6458\u5668
+tile.mfr.machine.blockplacer.name = \u65b9\u5757\u653e\u7f6e\u5668
+tile.mfr.machine.mobcounter.name = \u751f\u7269\u8ba1\u6570\u5668
+tile.mfr.machine.steamturbine.name = \u84b8\u6c7d\u6da1\u8f6e
 
 tile.mfr.conveyor.default.name = \u4f20\u9001\u5e26
 tile.mfr.conveyor.white.name = \u767d\u8272\u4f20\u9001\u5e26
@@ -148,20 +150,22 @@ tile.mfr.cable.redstone.name = \u7ea2\u77f3\u7ebf\u7f06
 tile.mfr.rednet.logic.name = \u53ef\u7f16\u7a0b\u7ea2\u77f3\u63a7\u5236\u5668
 tile.mfr.rednet.panel.historian.name = \u6ce2\u5f62\u8bb0\u5f55\u5668
 
-tile.mfr.liquid.milk.flowing.name = \u725b\u5976
-tile.mfr.liquid.milk.still.name = \u725b\u5976
-tile.mfr.liquid.sludge.flowing.name = \u6c61\u6ce5
-tile.mfr.liquid.sludge.still.name = \u6c61\u6ce5
-tile.mfr.liquid.sewage.flowing.name = \u6c61\u6c34
-tile.mfr.liquid.sewage.still.name = \u6c61\u6c34
-tile.mfr.liquid.essence.flowing.name = \u7cbe\u534e\u6db2
-tile.mfr.liquid.essence.still.name = \u7cbe\u534e\u6db2
-tile.mfr.liquid.biofuel.flowing.name = \u751f\u7269\u71c3\u6cb9
-tile.mfr.liquid.biofuel.still.name = \u751f\u7269\u71c3\u6cb9
-tile.mfr.liquid.meat.still.name = \u8089\u6c64
-tile.mfr.liquid.pinkslime.still.name = \u7c89\u8272\u7c98\u6db2
-tile.mfr.liquid.chocolatemilk.still.name = \u5de7\u514b\u529b\u725b\u5976
-tile.mfr.liquid.mushroomsoup.still.name = \u8611\u83c7\u6c64
+fluid.mfr.liquid.milk.flowing.name = \u725b\u5976
+fluid.mfr.liquid.milk.still.name = \u725b\u5976
+fluid.mfr.liquid.sludge.flowing.name = \u6c61\u6ce5
+fluid.mfr.liquid.sludge.still.name = \u6c61\u6ce5
+fluid.mfr.liquid.sewage.flowing.name = \u6c61\u6c34
+fluid.mfr.liquid.sewage.still.name = \u6c61\u6c34
+fluid.mfr.liquid.mobessence.flowing.name = \u7cbe\u534e\u6db2
+fluid.mfr.liquid.mobessence.still.name = \u7cbe\u534e\u6db2
+fluid.mfr.liquid.biofuel.flowing.name = \u751f\u7269\u71c3\u6cb9
+fluid.mfr.liquid.biofuel.still.name = \u751f\u7269\u71c3\u6cb9
+fluid.mfr.liquid.meat.still.name = \u8089\u6c64
+fluid.mfr.liquid.pinkslime.still.name = \u7c89\u8272\u7c98\u6db2
+fluid.mfr.liquid.chocolatemilk.still.name = \u5de7\u514b\u529b\u725b\u5976
+fluid.mfr.liquid.mushroomsoup.still.name = \u8611\u83c7\u6c64
+
+entity.MineFactoryReloaded.mfrEntityPinkSlime.name = \u7c89\u8272\u53f2\u83b1\u59c6
 
 item.mfr.hammer.name = \u7cbe\u5bc6\u5de5\u5382\u9524
 item.mfr.fertilizer.name = \u5de5\u4e1a\u80a5\u6599
@@ -179,8 +183,17 @@ item.mfr.bucket.pinkslime.name = \u7c89\u8272\u7c98\u6db2\u6876
 item.mfr.bucket.chocolatemilk.name = \u5de7\u514b\u529b\u725b\u5976\u6876
 item.mfr.bucket.mushroomsoup.name = \u8611\u83c7\u6c64\u6876
 
+item.mfr.bucket.plasticcup.name = \u5851\u6599\u676f
+item.mfr.bucket.plasticcup.prefix.name =
+item.mfr.bucket.plasticcup.suffix.name =\u676f
+item.mfr.bucket.plasticcell.name = \u5851\u6599\u5355\u5143
+item.mfr.bucket.plasticcell.prefix.name =
+item.mfr.bucket.plasticcell.suffix.name =\u5355\u5143
+
 item.mfr.syringe.cure.name = \u50f5\u5c38\u75c5\u6bd2\u6297\u4f53\u6ce8\u5c04\u5668
 item.mfr.syringe.empty.name = \u7a7a\u6ce8\u5c04\u5668
+item.mfr.syringe.empty.prefix.name =
+item.mfr.syringe.empty.suffix.name = \u6ce8\u5c04\u5668
 item.mfr.syringe.growth.name = \u751f\u957f\u6fc0\u7d20\u6ce8\u5c04\u5668
 item.mfr.syringe.health.name = \u6cbb\u6108\u836f\u6c34\u6ce8\u5c04\u5668
 item.mfr.syringe.slime.name = \u53f2\u83b1\u59c6\u5de8\u5927\u5316\u6fc0\u7d20\u6ce8\u5c04\u5668
@@ -204,6 +217,12 @@ item.mfr.meat.ingot.raw.name = \u751f\u8089\u952d
 item.mfr.meat.ingot.cooked.name = \u70e4\u8089\u952d
 item.mfr.meat.nugget.raw.name = \u751f\u8089\u7c92
 item.mfr.meat.nugget.cooked.name = \u70e4\u8089\u7c92
+item.mfr.pinkslimeball.name = \u7c89\u8272\u7c98\u6db2\u7403
+item.mfr.rocket.name = \u81ea\u63a8\u8fdb\u53cd\u7269\u8d28\u706b\u7bad
+item.mfr.rocket.smart.name = \u8ffd\u8e2a\u578b\u81ea\u5bfc\u822a\u53cd\u7269\u8d28\u706b\u7bad
+item.mfr.rocketlauncher.name = \u81ea\u63a8\u8fdb\u53cd\u7269\u8d28\u706b\u7bad\u53d1\u5c04\u7b52
+
+item.mfr.fishingrod.name = \u70b8\u9c7c\u7aff
 
 item.mfr.ceramicdye.white.name = \u9676\u74f7\u989c\u6599(\u767d\u8272)
 item.mfr.ceramicdye.orange.name = \u9676\u74f7\u989c\u6599(\u6a59\u8272)
@@ -239,6 +258,7 @@ item.mfr.laserfocus.green.name = \u956d\u5c04\u805a\u7126\u900f\u955c  (\u7eff\u
 item.mfr.laserfocus.red.name = \u956d\u5c04\u805a\u7126\u900f\u955c  (\u7ea2\u8272)
 item.mfr.laserfocus.black.name = \u956d\u5c04\u805a\u7126\u900f\u955c  (\u9ed1\u8272)
 
+item.mfr.upgrade.radius.cobble.name = \u5347\u7ea7\u63d2\u4ef6(\u5706\u77f3)
 item.mfr.upgrade.radius.lapis.name = \u5347\u7ea7\u63d2\u4ef6(\u9752\u91d1\u77f3)
 item.mfr.upgrade.radius.iron.name = \u5347\u7ea7\u63d2\u4ef6(\u94c1)
 item.mfr.upgrade.radius.tin.name = \u5347\u7ea7\u63d2\u4ef6(\u9521)
@@ -254,6 +274,15 @@ item.mfr.upgrade.radius.emerald.name = \u5347\u7ea7\u63d2\u4ef6(\u7eff\u5b9d\u77
 item.mfr.upgrade.logic.100.name = PRC LX-100\u578b\u903b\u8f91\u6269\u5c55\u5361
 item.mfr.upgrade.logic.300.name = PRC LX-300\u578b\u903b\u8f91\u6269\u5c55\u5361
 item.mfr.upgrade.logic.500.name = PRC LX-500\u578b\u903b\u8f91\u6269\u5c55\u5361
+
+item.mfr.needlegun.name = \u9488\u51fb\u67aa
+item.mfr.needlegun.ammo.empty.name = \u7a7a\u5fc3\u9488\u7ba1
+item.mfr.needlegun.ammo.standard.name = \u6807\u51c6\u9488\u7ba1
+item.mfr.needlegun.ammo.lava.name = \u5ca9\u6d46\u9488\u7ba1
+item.mfr.needlegun.ammo.sludge.name = \u6c61\u6ce5\u9488\u7ba1
+item.mfr.needlegun.ammo.sewage.name = \u6c61\u6c34\u9488\u7ba1
+item.mfr.needlegun.ammo.fire.name = \u70c8\u7130\u9488\u7ba1
+item.mfr.needlegun.ammo.anvil.name = \u94c1\u7827\u9488\u7ba1
 
 circuit.mfr.noop = (No-Op)
 circuit.mfr.adder.analog = \u52a0\u6cd5\u5668(\u6a21\u62df)
@@ -277,6 +306,7 @@ circuit.mfr.flipflop.jk = JK-\u89e6\u53d1\u5668
 circuit.mfr.flipflop.t = T-\u89e6\u53d1\u5668
 circuit.mfr.inverter = \u53cd\u76f8\u5668
 circuit.mfr.latch.d.gated = D-\u9501\u5b58\u5668(\u95e8\u63a7)
+circuit.mfr.latch.d.clocked = D-\u9501\u5b58\u5668(\u5b9a\u65f6)
 circuit.mfr.latch.sr = SR-\u9501\u5b58\u5668
 circuit.mfr.latch.sr.gated = SR-\u9501\u5b58\u5668(\u95e8\u63a7)
 circuit.mfr.max.2 = \u6bd4\u8f83\u5668\uff1a\u6700\u5927\u503c(2-\u8f93\u5165)
@@ -285,6 +315,8 @@ circuit.mfr.max.4 = \u6bd4\u8f83\u5668\uff1a\u6700\u5927\u503c(4-\u8f93\u5165)
 circuit.mfr.min.2 = \u6bd4\u8f83\u5668\uff1a\u6700\u5c0f\u503c(2-\u8f93\u5165)
 circuit.mfr.min.3 = \u6bd4\u8f83\u5668\uff1a\u6700\u5c0f\u503c(3-\u8f93\u5165)
 circuit.mfr.min.4 = \u6bd4\u8f83\u5668\uff1a\u6700\u5c0f\u503c(4-\u8f93\u5165)
+circuit.mfr.multipulse = \u591a\u8def\u8109\u51b2\u5668
+circuit.mfr.mux.16.analog = \u591a\u8def\u590d\u7528\u5668(15-\u8f93\u5165\uff0c\u6a21\u62df)
 circuit.mfr.mux.4 = \u591a\u8def\u590d\u7528\u5668(4-\u8f93\u5165)
 circuit.mfr.nand.2 = \u4e0e\u975e\u95e8(2-\u8f93\u5165)
 circuit.mfr.nand.3 = \u4e0e\u975e\u95e8(3-\u8f93\u5165)
@@ -306,6 +338,7 @@ circuit.mfr.pulselengthener = \u8109\u51b2\u5ef6\u957f\u5668
 circuit.mfr.randomizer.analog = \u968f\u673a\u8109\u51b2\u53d1\u751f\u5668(\u6a21\u62df)
 circuit.mfr.randomizer.digital = \u968f\u673a\u8109\u51b2\u53d1\u751f\u5668(\u6570\u5b57)
 circuit.mfr.scaler = \u5b9a\u6807\u5668
+circuit.mfr.schmitttrigger = \u65bd\u5bc6\u7279\u89e6\u53d1\u5668
 circuit.mfr.sevensegmentencoder = \u4e03\u6bb5\u8bd1\u7801\u5668
 circuit.mfr.subtractor = \u51cf\u6cd5\u5668
 circuit.mfr.wavegenerator.sawtooth.falling = \u952f\u9f7f\u6ce2\u53d1\u751f\u5668\uff08\u4e0b\u964d\uff09
@@ -319,3 +352,41 @@ circuit.mfr.xnor.4 = \u5f02\u6216\u975e\u95e8(4-\u8f93\u5165)
 circuit.mfr.xor.2 = \u5f02\u6216(2-\u8f93\u5165)
 circuit.mfr.xor.3 = \u5f02\u6216(3-\u8f93\u5165)
 circuit.mfr.xor.4 = \u5f02\u6216(4-\u8f93\u5165)
+
+chat.info.mfr.safarinet.capture=\u5207\u6362\u4e3a\u6355\u83b7\u6a21\u5f0f
+chat.info.mfr.safarinet.release=\u5207\u6362\u4e3a\u91ca\u653e\u6a21\u5f0f
+
+chat.info.mfr.spyglass.nosight=\u89c6\u91ce\u91cc\u7a7a\u65e0\u4e00\u7269
+chat.info.mfr.spyglass.hitentity=\u53d1\u73b0%s\u4f4d\u4e8e%.1f, %.1f, %.1f
+chat.info.mfr.spyglass.hitblock=\u53d1\u73b0%s [%d:%d]\u4f4d\u4e8e%.1f, %.1f, %.1f
+chat.info.mfr.spyglass.hitunknown=\u53d1\u73b0\u4e0d\u660e\u7269\u4f53(\u6765\u81ea\u67d0\u4e2a\u51fabug\u7684\u6a21\u7ec4?)\u4f4d\u4e8e%.1f, %.1f, %.1f
+
+chat.info.mfr.ruler.nosight=\u89c6\u91ce\u91cc\u7a7a\u65e0\u4e00\u7269
+chat.info.mfr.ruler.hitentity=\u51fb\u4e2d\u5b9e\u4f53 - \u6d4b\u91cf\u5931\u8d25
+chat.info.mfr.ruler.startposition=\u8bb0\u5f55\u8d77\u59cb\u4f4d\u7f6e
+chat.info.mfr.ruler.distance=\u8ddd\u79bb: %d, \u8ba1\u6570: %d
+chat.info.mfr.ruler.total=\u603b\u8ddd\u79bb: %.1f
+
+chat.info.mfr.rednet.meter.cable.allzero=\u6240\u6709\u7ea2\u77f3\u7ebf\u7f06\u5b50\u7f51\u7edc\u4fe1\u53f7\u5f3a\u5ea6\u5747\u4e3a0
+chat.info.mfr.rednet.meter.cable.restzero=\u6240\u6709\u5176\u4ed6\u7ea2\u77f3\u7ebf\u7f06\u5b50\u7f51\u7edc\u4fe1\u53f7\u5f3a\u5ea6\u5747\u4e3a0
+chat.info.mfr.rednet.meter.varprefix=\u53d8\u91cf
+chat.info.mfr.rednet.meter.var.allzero=\u5168\u90e8\u53d8\u91cf\u5747\u4e3a0
+chat.info.mfr.rednet.meter.var.restzero=\u5168\u90e8\u5176\u4ed6\u53d8\u91cf\u5747\u4e3a0
+chat.info.mfr.rednet.meter.dustprefix=\u7ea2\u77f3\u7c89
+
+chat.info.mfr.rednet.memorycard.uploaded=PRC\u7a0b\u5e8f\u5df2\u7ecf\u4ece\u63d2\u5165PRC\u7684\u5185\u5b58\u5361\u8f7d\u5165
+chat.info.mfr.rednet.memorycard.downloaded=PRC\u7a0b\u5e8f\u5df2\u7ecf\u4e0b\u8f7d\u5230\u63d2\u5165PRC\u7684\u5185\u5b58\u5361\u4e2d
+chat.info.mfr.rednet.memorycard.error=PRC\u5143\u4ef6\u4e0d\u8db3\u4ee5\u8fd0\u884c\u8be5\u7a0b\u5e8f
+
+chat.info.mfr.rednet.connection.standard=\u8bbe\u7f6e\u7ebf\u7f06\u4e3a\u6807\u51c6\u8fde\u63a5\u6a21\u5f0f
+chat.info.mfr.rednet.connection.forced=\u8bbe\u7f6e\u7ebf\u7f06\u4e3a\u5f3a\u5236\u8fde\u63a5\u6a21\u5f0f
+chat.info.mfr.rednet.connection.forcedstrong=\u8bbe\u7f6e\u7ebf\u7f06\u4e3a\u5f3a\u8fde\u63a5\u6a21\u5f0f
+chat.info.mfr.rednet.connection.cableonly=\u8bbe\u7f6e\u7ebf\u7f06\u4e3a\u5747\u4e0e\u7ebf\u7f06\u8fde\u63a5\u6a21\u5f0f
+death.attack.mfr.slaughterhouse=%1$s\u88ab\u52a0\u5de5\u6210\u4e86\u8089\u6c64\u3002
+death.attack.mfr.slaughterhouse.player=%1$s\u88ab%2$s\u52a0\u5de5\u6210\u4e86\u8089\u6c64\u3002 
+death.attack.mfr.slaughterhouse.1=%1$s\u88ab\u52a0\u5de5\u6210\u4e86\u8089\u9171\u3002
+death.attack.mfr.slaughterhouse.1.player=%1$s\u88ab%2$s\u52a0\u5de5\u6210\u4e86\u8089\u9171\u3002
+death.attack.mfr.grinder=%1$s\u88ab\u78e8\u788e\u6210\u4e86\u6e23\u6e23\u3002
+death.attack.mfr.grinder.player=%2$s\u786e\u4fe1%1$s\u5df2\u7ecf\u88ab\u78e8\u788e\u6210\u4e86\u6e23\u6e23\u3002
+death.attack.mfr.laser=%1$s\u88ab\u6fc0\u5149\u5206\u89e3\u4e86.
+death.attack.mfr.laser.player=%2$s\u786e\u4fe1%1$s\u5df2\u7ecf\u88ab\u6fc0\u5149\u5206\u89e3\u6389\u4e86.
