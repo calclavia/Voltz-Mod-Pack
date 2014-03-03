@@ -11,21 +11,18 @@ Voltz/Ampz is a mod pack that consists of various Universal Electricity mods int
 * ExtrabiomesXL (MisterFiber)
 * ICBM (Calclavia)
 * Inventory Tweaks (Kobata)
-* Mekanism (Aidancbrady)
 * Modular Force Field System (Calclavia)
 * Minefactory Reloaded (Powercrystals)
 * Modular Powersuits (MachineMuse)
 * Modular Powersuits Addon (Andrew)
 * NEI Plugins (mistaqur)
-* RedLogic (Immbis)
 * Zan's Minimap (Zaneris)
 * Forge Multipart
 * Project Red (http://projectred.endermedia.org/)
 * RotaryCraft
-* Open Computers
+* Open Computers (Sangar)
 * Mad Science
-* Resonant Induction
-* CoFHCore
+* Resonant Induction (Calclavia)
 
 ###Next version
 Add:
