@@ -1,5 +1,6 @@
 ## Voltz Mod Pack
-Voltz/Ampz is a mod pack that consists of various Universal Electricity mods introducing a realistic and unique experience into Minecraft. Build large reactors and burn your enemies with missiles; create contraptions with force fields and machinery! The pack will be sure to bring exciting new possibilities into Minecraft!
+Voltz/Ampz is a mod pack that consists of various Universal Electricity mods which introduces a realistic and unique experience to Minecraft. Build large reactors and burn your enemies with missiles; create contraptions with force fields and machinery! The pack will bring exciting new possibilities to Minecraft!
+
 ### Included Mods:
 * Applied Energistics (AlgorithmX2)
 * Atomic Science (Calclavia)
